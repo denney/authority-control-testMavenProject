@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jsTree test</title>
+    <!-- 2 load the theme CSS file -->
+
+    <link rel="stylesheet" href="https://static.jstree.com/latest/assets/dist/themes/default/style.min.css"/>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://static.jstree.com/latest/assets/dist/jstree.min.js"></script>
+</head>
+<body>
+<div id="container"></div>
+<script>
+
+
+    $(function () {
+
+
+        $('#container').jstree({
+
+
+            'core': {
+
+
+                'data': [
+
+
+                    {
+                        "text": "根节点", "children": [
+
+
+                            {"text": "子节点1"},
+
+
+                            {"text": "字节点2"}
+
+
+                        ]
+
+
+                    }
+
+
+                ],
+
+
+                "check_callback": true
+
+
+            },
+
+
+            "checkbox": {
+
+
+                "keep_selected_style": false
+
+
+            },
+
+
+            "contextmenu": {
+
+
+                select_node: false,
+
+
+                show_at_node: true,
+
+
+                items: {
+
+
+                    "新建设备": {
+
+
+                        "label": "新建菜单",
+
+
+                        "icon": "glyphicon glyphicon-plus",
+
+
+                        "action": function (data) {
+
+
+                            var inst = $.jstree.reference(data.reference),
+
+
+                                obj = inst.get_node(data.reference);
+
+
+                            inst.create_node(obj, {}, "last", function (new_node) {
+
+
+                                try {
+
+
+                                    new_node.text = "新建设备";
+
+
+                                    inst.edit(new_node);
+
+
+                                } catch (ex) {
+
+
+                                    setTimeout(function () {
+                                        inst.edit(new_node);
+                                    }, 0);
+
+
+                                }
+
+
+                            });
+
+
+                        }
+
+
+                    },
+
+
+                    "重命名": {
+
+
+                        "separator_before": false,
+
+
+                        "separator_after": false,
+
+
+                        "_disabled": false, //(this.check("rename_node", data.reference, this.get_parent(data.reference), "")),
+
+
+                        "label": "重命名",
+
+
+                        "shortcut_label": 'F2',
+
+
+                        "icon": "glyphicon glyphicon-leaf",
+
+
+                        "action": function (data) {
+
+
+                            var inst = $.jstree.reference(data.reference),
+
+
+                                obj = inst.get_node(data.reference);
+
+
+                            inst.edit(obj);
+
+
+                        }
+
+
+                    },
+
+
+                    "删除菜单": {
+
+
+                        "separator_before": false,
+
+
+                        "icon": false,
+
+
+                        "separator_after": false,
+
+
+                        "_disabled": false,
+                        //(this.check("delete_node", data.reference, this.get_parent(data.reference), "")),
+
+
+                        "label": "删除菜单",
+
+
+                        "icon": "glyphicon glyphicon-remove",
+
+
+                        "action": function (data) {
+
+
+                            var inst = $.jstree.reference(data.reference),
+
+
+                                obj = inst.get_node(data.reference);
+
+
+                            if (inst.is_selected(obj)) {
+
+
+                                inst.delete_node(inst.get_selected());
+
+
+                            }
+
+
+                            else {
+
+
+                                inst.delete_node(obj);
+
+
+                            }
+
+
+                        }
+
+
+                    }
+
+
+                }
+
+
+            },
+
+
+            "plugins": ["checkbox", "contextmenu","dnd"]
+
+
+        });
+
+
+    });
+
+</script>
+</body>
+</html>
