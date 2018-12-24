@@ -123,7 +123,7 @@
 				window.top.location.href = window.location.href;
 			}
 		</script>
-		<script type="text/javascript" src="/resources/js/jquery-1.11.3.js"></script>
+		<script type="text/javascript" src="test/resources/js/jquery-1.11.3.js"></script>
 		<script type="text/javascript" src="/resources/js/login.js"></script>
 </body>
 </html>
