@@ -5,10 +5,10 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>用户列表</title>
-	<link rel="stylesheet" href="/resources/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="/resources/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="/resources/js/layer/skin/default/layer.css" />
-	<link rel="stylesheet" href="/resources/js/bootstrap-table/bootstrap-table.css" />
+	<link rel="stylesheet" href="resources/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="resources/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="resources/js/layer/skin/default/layer.css" />
+	<link rel="stylesheet" href="resources/js/bootstrap-table/bootstrap-table.css" />
 </head>
 <body>
 	<div style="margin-left: auto;margin-right: auto;width: 95%">
@@ -50,6 +50,6 @@
 	</div>
 </div>	
 <%@ include file="../common.jsp" %>
-<script src="/resources/js/user/list.js"></script>
+<script src="resources/js/user/list.js"></script>
 </body>
 </html>
