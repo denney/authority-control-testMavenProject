@@ -161,7 +161,7 @@
 
 	</dependencies>
 	<build>
-		<finalName>authority-control-shiro</finalName>
+		<finalName>test</finalName>
 
 		<plugins>
 			<plugin>
