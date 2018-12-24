@@ -5,11 +5,11 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>角色列表</title>
-	<link rel="stylesheet" href="resources/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="resources/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="resources/js/layer/skin/default/layer.css" />
-	<link rel="stylesheet" href="resources/js/bootstrap-table/bootstrap-table.css" />
-	<link rel="stylesheet" href="resources/js/zTree/css/zTreeStyle/metro.css" />
+	<link rel="stylesheet" href="/resources/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/resources/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="/resources/js/layer/skin/default/layer.css" />
+	<link rel="stylesheet" href="/resources/js/bootstrap-table/bootstrap-table.css" />
+	<link rel="stylesheet" href="/resources/js/zTree/css/zTreeStyle/metro.css" />
 </head>
 <body>
 	<div style="margin-left: auto;margin-right: auto;width: 95%">
@@ -48,9 +48,9 @@
 		<label for="form-field-select-2">选择权限</label>
 		<ul id="permissionTree" class="ztree" style="width:100%; overflow:hidden;"></ul>
 	</div>
-</div>	
+</div>
 <%@ include file="../common.jsp" %>
-<script src="resources/js/zTree/js/jquery.ztree.all-3.5.min.js"></script>
-<script src="resources/js/role/list.js"></script>
+<script src="/resources/js/zTree/js/jquery.ztree.all-3.5.min.js"></script>
+<script src="/resources/js/role/list.js"></script>
 </body>
 </html>

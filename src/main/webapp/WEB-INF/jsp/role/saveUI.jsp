@@ -4,10 +4,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>角色管理</title>
-<link rel="stylesheet" href="resources/css/bootstrap.min.css" />
-<link rel="stylesheet" href="resources/css/font-awesome.min.css" />
-<link rel="stylesheet" href="resources/css/ace.min.css" />
-<link rel="stylesheet" href="resources/js/layer/skin/default/layer.css" />
+<link rel="stylesheet" href="/resources/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/resources/css/font-awesome.min.css" />
+<link rel="stylesheet" href="/resources/css/ace.min.css" />
+<link rel="stylesheet" href="/resources/js/layer/skin/default/layer.css" />
 </head>
 <body>
 	<div class="page-content">
@@ -48,8 +48,8 @@
 			</div>
 		</div>
 	</div>
-	<script src="resources/js/jquery-1.11.3.js"></script>
-	<script src="resources/js/layer/layer.js"></script>
-	<script src="resources/js/role/saveUI.js"></script>
+	<script src="/resources/js/jquery-1.11.3.js"></script>
+	<script src="/resources/js/layer/layer.js"></script>
+	<script src="/resources/js/role/saveUI.js"></script>
 </body>
 </html>
