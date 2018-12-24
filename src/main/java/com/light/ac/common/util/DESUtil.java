@@ -72,7 +72,7 @@ public class DESUtil {
 
 
 //		System.out.println(getEncryptString("root"));
-//		System.out.println(getEncryptString(""));
+		System.out.println(getEncryptString("123456"));
 		System.out.println(getDecryptString("WnplV/ietfQ="));
 		System.out.println(getDecryptString("HyQH1bD/jNs="));
 
