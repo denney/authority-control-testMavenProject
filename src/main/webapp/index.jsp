@@ -7,11 +7,11 @@
 		<meta name="keywords" content="权限控制系统" />
 		<meta name="description" content="自定义权限控制系统" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="/resources/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="/resources/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="resources/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="resources/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
-		<link rel="stylesheet" href="/resources/css/ace.min.css" />
-		<link rel="stylesheet" href="/resources/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="resources/css/ace.min.css" />
+		<link rel="stylesheet" href="resources/css/ace-rtl.min.css" />
 	</head>
 
 	<body class="login-layout">
