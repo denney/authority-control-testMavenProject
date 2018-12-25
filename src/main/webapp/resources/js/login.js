@@ -14,8 +14,8 @@ $(function() {
 			return;
 		}
 		
-		$.ajax(
-			"type":"post",{
+		$.ajax({
+			"type":"post",
 			"url": "/login",
 			"data":{"userName":$userName,"password":$password},
 			"success" : function(resp) {
