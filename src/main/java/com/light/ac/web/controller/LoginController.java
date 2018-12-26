@@ -49,7 +49,7 @@ public class LoginController {
 		return Result.succeed("manageUI");
 	}
 	
-	@RequestMapping("/logout")
+	@RequestMapping("logout")
 	@ResponseBody
 	public Result logout(HttpSession session) {
 		Subject subject = SecurityUtils.getSubject();

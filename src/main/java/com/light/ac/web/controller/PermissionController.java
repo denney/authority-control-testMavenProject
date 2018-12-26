@@ -24,11 +24,7 @@ public class PermissionController {
 	@Autowired
 	private PermissionService permissionService;
 	
-	@RequiresPermissions("permission:listUI")
-	@RequestMapping("listUI")
-	public String listUI() {
-		return "permission/listUI";
-	}
+
 	
 	@RequiresPermissions("permission:listUI")
 	@RequestMapping("list")

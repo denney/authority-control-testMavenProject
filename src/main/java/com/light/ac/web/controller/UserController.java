@@ -19,7 +19,7 @@ import com.light.ac.service.UserService;
 import com.light.ac.vo.Result;
 
 @Controller
-@RequestMapping("user")
+@RequestMapping("/user")
 public class UserController {
 
 	@Autowired
@@ -28,14 +28,14 @@ public class UserController {
 	@Autowired
 	private RoleService roleService;
 	
-	@RequiresPermissions("user:listUI")
-	@RequestMapping("listUI")
-	public String listUI(HttpServletRequest request) {
-		return "/user/listUI";
-	}
+//	@RequiresPermissions("user:listUI")
+//	@RequestMapping("/listUI")
+//	public String listUI() {
+//		return "listUI";
+//	}
 	
 	@RequiresPermissions("user:listUI")
-	@RequestMapping("list")
+	@RequestMapping("/list")
 	@ResponseBody
 	public Result list(int offset, int limit,String search) {
 		
@@ -46,7 +46,7 @@ public class UserController {
 	
 //===================================保存/修改/删除方法=======================================	
 	
-	@RequestMapping("saveUI")
+	@RequestMapping("/saveUI")
 	public String saveUI(Integer id,HttpServletRequest request) {
 		if (id != null) {
 			User user = this.userService.getById(id);
@@ -69,7 +69,7 @@ public class UserController {
 			user.setPassword(DigestUtils.md5Hex("123456"));
 			this.userService.save(user);
 		}
-		return "redirect:/user/listUI";
+		return "redirect:user/listUI";
 	}
 	
 	@RequiresPermissions("user:delete")

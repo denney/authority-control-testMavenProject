@@ -2,7 +2,7 @@ $(function() {
 	
 	// 查询数据
 	var tableObj = commonUtil.initTable({
-        url : "/user/list",
+        url : "user/list",
         search : true,
         detailView : true,
         pagination : true,

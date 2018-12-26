@@ -2,7 +2,7 @@ $(function() {
 	// 查询数据
 	var tableObj = commonUtil.initTable({
 		treeShowField: 'name',
-        url : "/permission/list",
+        url : "permission/list",
         search : true,
         detailView : true,
         pagination : true,

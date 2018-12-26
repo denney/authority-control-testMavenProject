@@ -23,13 +23,7 @@ public class RoleController {
 	@Autowired
 	private RoleService roleService;
 	
-	@RequiresPermissions("role:listUI")
-	@RequestMapping("listUI")
-	public String listUI() {
-		
-		return "role/listUI";
-	}
-	
+
 	@RequiresPermissions("role:listUI")
 	@RequestMapping("list")
 	@ResponseBody
@@ -69,7 +63,7 @@ public class RoleController {
 		} else {
 			this.roleService.update(role);
 		}
-		return "redirect:/role/listUI";
+		return "redirect:role/listUI";
 	}
 	
 	

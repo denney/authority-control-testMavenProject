@@ -20,6 +20,7 @@
 	
 	<!-- 静态资源放行 -->
 	<mvc:resources location="/resources/" mapping="/resources/**/*"/>
+	<mvc:resources location="/css/" mapping="/css/**"/>
 
 	<!-- 加载解析 @rquestMapping等注解的解析器 -->
 	<mvc:annotation-driven>
@@ -65,4 +66,5 @@
 	<bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
 		<property name="securityManager" ref="securityManager" />
 	</bean>
+	<mvc:default-servlet-handler/>
 </beans>
