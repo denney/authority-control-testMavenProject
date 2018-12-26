@@ -74,7 +74,7 @@ public class PermissionController {
 		} else {
 			this.permissionService.save(permission);
 		}
-		return "redirect:/permission/listUI";
+		return "redirect:permission/listUI";
 	}
 	
 	@RequiresPermissions("permission:delete")

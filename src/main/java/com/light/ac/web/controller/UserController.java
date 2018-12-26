@@ -31,7 +31,7 @@ public class UserController {
 	@RequiresPermissions("user:listUI")
 	@RequestMapping("listUI")
 	public String listUI(HttpServletRequest request) {
-		return "user/listUI";
+		return "/user/listUI";
 	}
 	
 	@RequiresPermissions("user:listUI")
