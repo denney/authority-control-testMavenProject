@@ -1,0 +1,133 @@
+version: '2'
+services:
+  #tomcat容器
+  tomcat:
+    #定义主机名
+#    hostname: myshop_tomcat
+    #使用的镜像
+    image: daocloud.io/zuzhimingchengs/tomcat1:dst
+    #容器的映射端口
+    ports:
+
+#      HOST:CONTAINER
+    - 6666:8080
+#    - 80:80
+    #定义IP网络
+    networks:
+      staticneta:
+        ipv4_address: 172.20.1.2
+    #定义挂载点
+    volumes:
+    - ./tomcat8/webapps:/usr/local/apache-tomcat-8.0.30/webapps
+    - ./tomcat8/logs:/usr/local/apache-tomcat-8.0.30/logs
+    - ./tomcat8/conf/server.xml:/usr/local/apache-tomcat-8.0.30/conf/server.xml
+    #环境变量
+    environment:
+    - TZ=Asia/Shanghai
+    - LANG=en_US.UTF-8
+
+  #redis容器
+  redis:
+    #定义主机名
+    hostname: myshop_redis
+    #使用的镜像
+    image: redis:5.0.2
+    #容器的映射端口
+    ports:
+    - 6379:6379
+    #定义IP网络
+    networks:
+      staticneta:
+        ipv4_address: 172.20.1.3
+    #定义挂载点
+    volumes:
+    - ./redis/data:/data
+    #环境变量
+    environment:
+    - TZ=Asia/Shanghai
+    - LANG=en_US.UTF-8
+
+  #activemq容器
+  activemq:
+    #定义主机名
+    hostname: activemq
+    #使用的镜像
+    image: lanvv/myshop_activemq
+    #容器的映射端口
+    ports:
+    - 8161:8161
+    #定义IP网络
+    networks:
+      staticneta:
+        ipv4_address: 172.20.1.4
+    #定义挂载点
+    volumes:
+    - ./activemq/data/activemq:/data/activemq
+    - ./activemq/var/log/activemq:/var/log/activemq
+    #环境变量
+    environment:
+      ACTIVEMQ_ADMIN_LOGIN: admin
+      ACTIVEMQ_ADMIN_PASSWORD: admin
+      ACTIVEMQ_CONFIG_MINMEMORY: 512
+      ACTIVEMQ_CONFIG_MAXMEMORY: 2048
+      TZ: Asia/Shanghai
+      LANG: en_US.UTF-8
+
+  #mysql容器
+  mysql:
+    #定义主机名
+    hostname: myshop_mysql
+    #使用的镜像
+    image: mysql:5.6
+    #容器的映射端口
+    ports:
+    - 3306:3306
+    #定义IP网络
+    networks:
+      staticneta:
+        ipv4_address: 172.20.1.5
+    #定义挂载点
+    volumes:
+    - ./mysql/conf:/etc/mysql/conf.d
+    - ./mysql/data:/var/lib/mysql
+    #定义mysql字符utf8
+    command: --character-set-server=utf8
+    #定义环境变量,mysql里密码，用户，数据库
+    environment:
+    - TZ=Asia/Shanghai
+    - LANG=en_US.UTF-8
+    MYSQL_ROOT_PASSWORD: 123456
+    MYSQL_DATABASE: my
+    MYSQL_USER: xxx
+    MYSQL_PASSWORD: xxx123456
+
+  #jenkins容器
+  jenkins:
+    #定义主机名
+    hostname: myshop_jenkins
+    #使用的镜像
+    image: jenkins:2.60.3
+    #容器用户=root
+    user: root
+    #容器的映射端口
+    ports:
+    - 8880:8080
+    #定义IP网络
+    networks:
+      staticneta:
+        ipv4_address: 172.20.1.6
+    #定义挂载点
+    volumes:
+    - ./jenkins_key:/root/.ssh
+    #环境变量
+    environment:
+    - TZ=Asia/Shanghai
+    - LANG=en_US.UTF-8
+
+#定义网络
+networks:
+  staticneta:
+    ipam:
+      config:
+      - subnet: 172.20.1.0/24
+        gateway: 172.20.1.1
