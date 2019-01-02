@@ -1,0 +1,89 @@
+version: '2'
+services:
+
+
+  #tomcat容器
+  tomcatcom:
+    #使用的镜像
+    image: daocloud.io/zuzhimingchengs/tomcat1:dst
+    #容器的映射端口
+    ports:
+    #      HOST:CONTAINER
+    - 1111:8080
+    #环境变量
+  #    environment:
+  #    - TZ=Asia/Shanghai
+  #    - LANG=en_US.UTF-8
+  #    depends_on:
+  #    - mysqlcom
+
+  #mysql容器
+  mysqlcom:
+    #定义主机名
+    #    hostname: myshop_mysql
+    #使用的镜像
+    image: mysql:latest
+    #容器的映射端口
+    ports:
+    - 3307:3306
+    - 33061:33060
+    #定义IP网络
+    #    networks:
+    #      staticneta:
+    #        ipv4_address: 172.20.1.5
+    #定义挂载点
+    volumes:
+    - /host_mnt/f/mysql:/var/lib/mysql
+
+    #定义mysql字符utf8
+    command: --character-set-server=utf8
+    #定义环境变量,mysql里密码，用户，数据库
+    environment:
+    - TZ=Asia/Shanghai
+    - LANG=en_US.UTF-8
+    - MYSQL_ROOT_PASSWORD=123456
+
+  #    MYSQL_DATABASE:
+  #    MYSQL_USER: xxx
+  #    MYSQL_PASSWORD: xxx123456
+
+  #jenkins容器
+  jenkinscom:
+    #定义主机名
+    #    hostname: myshop_jenkins
+    #使用的镜像
+    image: jenkins/jenkins:lts
+    #容器用户=root
+    user: jenkins
+    #容器的映射端口
+    ports:
+    - 9999:8080
+    #定义IP网络
+    #    networks:
+    #      staticneta:
+    #        ipv4_address: 172.20.1.6
+    #定义挂载点
+    volumes:
+    - /host_mnt/d/jenkins:/var/jenkins_home
+    #环境变量
+    environment:
+    - TZ=Asia/Shanghai
+    - LANG=en_US.UTF-8
+
+
+
+  #gitlba容器
+  gitlabcom:
+
+    hostname: gitlab.example.com
+    #镜像
+    image: gitlab/gitlab-ce:latest
+    ports:
+    - 443:443
+    - 81:80
+    - 33:22
+    restart: always
+    volumes:
+      - /host_mnt/d/gitlab/config:/etc/gitlab:Z
+      - /host_mnt/d/gitlab/logs:/var/log/gitlab:Z
+      - /host_mnt/d/gitlab/data:/var/opt/gitlab:Z
