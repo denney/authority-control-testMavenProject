@@ -6,12 +6,12 @@
 <meta charset="utf-8" />
 <title>403</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="/resources/css/bootstrap.min.css" />
-<link rel="stylesheet" href="/resources/css/font-awesome.min.css" />
+<link rel="stylesheet" href="resources/css/bootstrap.min.css" />
+<link rel="stylesheet" href="resources/css/font-awesome.min.css" />
 <link rel="stylesheet"
 	href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
-<link rel="stylesheet" href="/resources/css/ace.min.css" />
-<link rel="stylesheet" href="/resources/css/ace-rtl.min.css" />
+<link rel="stylesheet" href="resources/css/ace.min.css" />
+<link rel="stylesheet" href="resources/css/ace-rtl.min.css" />
 </head>
 <body>
 	<div class="page-content">

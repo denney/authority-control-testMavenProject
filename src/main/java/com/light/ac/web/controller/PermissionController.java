@@ -24,11 +24,7 @@ public class PermissionController {
 	@Autowired
 	private PermissionService permissionService;
 	
-	@RequiresPermissions("permission:listUI")
-	@RequestMapping("listUI")
-	public String listUI() {
-		return "permission/listUI";
-	}
+
 	
 	@RequiresPermissions("permission:listUI")
 	@RequestMapping("list")
@@ -74,7 +70,7 @@ public class PermissionController {
 		} else {
 			this.permissionService.save(permission);
 		}
-		return "redirect:/permission/listUI";
+		return "redirect:permission/listUI";
 	}
 	
 	@RequiresPermissions("permission:delete")

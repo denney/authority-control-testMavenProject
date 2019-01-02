@@ -46,15 +46,15 @@ public class LoginController {
 			
 		}
 		
-		return Result.succeed("/manageUI");
+		return Result.succeed("manageUI");
 	}
 	
-	@RequestMapping("/logout")
+	@RequestMapping("logout")
 	@ResponseBody
 	public Result logout(HttpSession session) {
 		Subject subject = SecurityUtils.getSubject();
 		subject.logout();
-		return Result.succeed("/index.jsp");
+		return Result.succeed("index.jsp");
 	}
 	
 	@RequestMapping("manageUI")

@@ -15,8 +15,8 @@ $(function() {
 		}
 		
 		$.ajax({
-			"type": "post",
-			"url": "/login",
+			"type":"post",
+			"url": "login",
 			"data":{"userName":$userName,"password":$password},
 			"success" : function(resp) {
 				if (resp.code == 200) {

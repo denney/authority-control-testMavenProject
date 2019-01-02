@@ -7,7 +7,7 @@ $(function() {
 	$("#logout-btn").on("click",function() {
 		$.ajax({
 			"type":"get",
-			"url":"/logout",
+			"url":"logout",
 			"success": function(resp) {
 				if (resp.code == 200) {
 					window.location.href = resp.obj;

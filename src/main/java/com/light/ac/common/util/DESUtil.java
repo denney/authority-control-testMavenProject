@@ -14,6 +14,9 @@ public class DESUtil {
 	private static String CHARSETNAME = "UTF-8";
 	private static String ALGORITHM = "DES";
 
+
+
+
 	static {
 		try {
 			KeyGenerator generator = KeyGenerator.getInstance(ALGORITHM);
@@ -72,8 +75,8 @@ public class DESUtil {
 
 
 //		System.out.println(getEncryptString("root"));
-//		System.out.println(getEncryptString(""));
-		System.out.println(getDecryptString("WnplV/ietfQ="));
+		System.out.println(getEncryptString("123456"));
+		System.out.println(getDecryptString("QAHlVoUc49w="));
 		System.out.println(getDecryptString("HyQH1bD/jNs="));
 
 

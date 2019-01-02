@@ -34,15 +34,15 @@ CREATE TABLE IF NOT EXISTS `t_permission` (
 /*!40000 ALTER TABLE `t_permission` DISABLE KEYS */;
 INSERT INTO `t_permission` (`permission_id`, `name`, `pid`, `parent_name`, `type`, `url`, `code`, `color`, `icon`, `sort`) VALUES
 	(1, '系统管理', 0, NULL, 1, NULL, NULL, NULL, NULL, 1),
-	(2, '用户管理', 1, '系统管理', 2, 'user/listUI', 'user:listUI', NULL, NULL, 1),
+	(2, '用户管理', 1, '系统管理', 2, 'listUIUser', 'user:listUI', NULL, NULL, 1),
 	(3, '新增', 2, '用户管理', 3, NULL, 'user:add', 'btn-primary', 'icon-ok', 2),
 	(4, '编辑', 2, '用户管理', 3, NULL, 'user:update', 'btn-warning', 'icon-edit', 3),
 	(5, '删除', 2, '用户管理', 3, NULL, 'user:delete', 'btn-danger', 'icon-trash', 4),
-	(6, '角色管理', 1, '系统管理', 2, 'role/listUI', 'role:listUI', NULL, NULL, 2),
+	(6, '角色管理', 1, '系统管理', 2, 'listUIRole', 'role:listUI', NULL, NULL, 2),
 	(7, '新增', 6, '角色管理', 3, NULL, 'role:add', 'btn-primary', 'icon-ok', 2),
 	(8, '编辑', 6, '角色管理', 3, NULL, 'role:update', 'btn-warning', 'icon-edit', 3),
 	(9, '删除', 6, '角色管理', 3, NULL, 'role:delete', 'btn-danger', 'icon-trash', 4),
-	(10, '权限管理', 1, '系统管理', 2, 'permission/listUI', 'permission:listUI', NULL, NULL, 3),
+	(10, '权限管理', 1, '系统管理', 2, 'listUIPermission', 'permission:listUI', NULL, NULL, 3),
 	(11, '新增', 10, '权限管理', 3, NULL, 'permission:add', 'btn-primary', 'icon-ok', 1),
 	(12, '编辑', 10, '权限管理', 3, NULL, 'permission:update', 'btn-warning', 'icon-edit', 2),
 	(13, '删除', 10, '权限管理', 3, NULL, 'permission:delete', 'btn-danger', 'icon-trash', 3),

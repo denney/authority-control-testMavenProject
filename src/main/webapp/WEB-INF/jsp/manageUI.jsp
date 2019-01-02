@@ -37,7 +37,7 @@
 					<ul class="nav ace-nav">
 						<li class="light-blue">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="/resources/images/user.png" alt="Jason's Photo" />
+								<img class="nav-user-photo" src="resources/images/user.png" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>欢迎,</small>
 									${loginUser.userName}
@@ -171,10 +171,10 @@
 				</div><!-- /.main-content -->
 			</div><!-- /.main-container-inner -->
 		</div><!-- /.main-container -->
-		<script src="/resources/js/jquery-1.11.3.js"></script>
-		<script src="/resources/js/bootstrap.min.js"></script>
-		<script src="/resources/js/ace.min.js"></script>
-		<script src="/resources/js/ace-extra.min.js"></script>
-		<script src="/resources/js/manageUI/config.js"></script>
+		<script src="resources/js/jquery-1.11.3.js"></script>
+		<script src="resources/js/bootstrap.min.js"></script>
+		<script src="resources/js/ace.min.js"></script>
+		<script src="resources/js/ace-extra.min.js"></script>
+		<script src="resources/js/manageUI/config.js"></script>
 </body>
 </html>
