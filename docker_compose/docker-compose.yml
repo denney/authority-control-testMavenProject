@@ -15,10 +15,6 @@ services:
     depends_on:
     - mysqlcom
 
-
-
-
-
   #mysql容器
   mysqlcom:
     #定义主机名
@@ -52,7 +48,7 @@ services:
   #jenkins容器
   jenkinscom:
     #定义主机名
-#    hostname: myshop_jenkins
+    #    hostname: myshop_jenkins
     #使用的镜像
     image: jenkins/jenkins:lts
     #容器用户=root
@@ -61,9 +57,9 @@ services:
     ports:
     - 9999:8080
     #定义IP网络
-#    networks:
-#      staticneta:
-#        ipv4_address: 172.20.1.6
+    #    networks:
+    #      staticneta:
+    #        ipv4_address: 172.20.1.6
     #定义挂载点
     volumes:
     - /host_mnt/d/jenkins:/var/jenkins_home
