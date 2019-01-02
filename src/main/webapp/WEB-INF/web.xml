@@ -56,11 +56,7 @@
     </filter-mapping>
     <!-- 解决Post请求乱码 end -->
 
-    <!-- springmvc容器 start -->
-    <servlet-mapping>
-        <servlet-name>default</servlet-name>
-        <url-pattern>*.css</url-pattern>
-    </servlet-mapping>
+
     <servlet>
 
         <servlet-name>springmvc</servlet-name>

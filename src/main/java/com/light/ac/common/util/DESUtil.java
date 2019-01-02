@@ -14,6 +14,9 @@ public class DESUtil {
 	private static String CHARSETNAME = "UTF-8";
 	private static String ALGORITHM = "DES";
 
+
+
+
 	static {
 		try {
 			KeyGenerator generator = KeyGenerator.getInstance(ALGORITHM);
