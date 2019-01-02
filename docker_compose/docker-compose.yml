@@ -1,5 +1,7 @@
 version: '2'
 services:
+
+
   #tomcat容器
   tomcatcom:
     #使用的镜像
@@ -7,13 +9,13 @@ services:
     #容器的映射端口
     ports:
     #      HOST:CONTAINER
-    - 6666:8080
+    - 1111:8080
     #环境变量
-    environment:
-    - TZ=Asia/Shanghai
-    - LANG=en_US.UTF-8
-    depends_on:
-    - mysqlcom
+  #    environment:
+  #    - TZ=Asia/Shanghai
+  #    - LANG=en_US.UTF-8
+  #    depends_on:
+  #    - mysqlcom
 
   #mysql容器
   mysqlcom:
@@ -70,3 +72,18 @@ services:
 
 
 
+  #gitlba容器
+  gitlabcom:
+
+    hostname: gitlab.example.com
+    #镜像
+    image: gitlab/gitlab-ce:latest
+    ports:
+    - 443:443
+    - 81:80
+    - 33:22
+    restart: always
+    volumes:
+      - /host_mnt/d/gitlab/config:/etc/gitlab:Z
+      - /host_mnt/d/gitlab/logs:/var/log/gitlab:Z
+      - /host_mnt/d/gitlab/data:/var/opt/gitlab:Z
