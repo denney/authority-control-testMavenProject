@@ -9,12 +9,12 @@
 		<meta name="description" content="站长素材提供Bootstrap模版,Bootstrap教程,Bootstrap中文翻译等相关Bootstrap插件下载" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link rel="stylesheet" href="/resources/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="/resources/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="resources/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="resources/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
-		<link rel="stylesheet" href="/resources/css/ace.min.css" />
-		<link rel="stylesheet" href="/resources/css/ace-rtl.min.css" />
-		<link rel="stylesheet" href="/resources/css/ace-skins.min.css" />
+		<link rel="stylesheet" href="resources/css/ace.min.css" />
+		<link rel="stylesheet" href="resources/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="resources/css/ace-skins.min.css" />
 	</head>
 
 	<body>
